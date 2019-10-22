@@ -69,8 +69,8 @@ public class Citrix_Login {
 			 By username=By.xpath("//*[@id='Enter user name']");
 			 
 			 if(elementFound(driver, 10, username)) {
-				 driver.findElement(username).sendKeys("U409022");
-				 driver.findElement(By.xpath("//*[@name='passwd']")).sendKeys("Infy1791");
+				 driver.findElement(username).sendKeys("");
+				 driver.findElement(By.xpath("//*[@name='passwd']")).sendKeys("");
 				 driver.findElement(By.id("Log_On")).click();
 				 Thread.sleep(2000);
 			 }
