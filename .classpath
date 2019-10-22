@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Ankit.j.Raj/Desktop/Selenium/software/selenium-server-standalone-3.141.59.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Ankit.j.Raj/Desktop/Selenium/software/selenium-java-3.141.59.zip"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
