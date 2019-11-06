@@ -69,8 +69,8 @@ public class Citrix_Login {
 			 By username=By.xpath("//*[@id='Enter user name']");
 			 
 			 if(elementFound(driver, 10, username)) {
-				 driver.findElement(username).sendKeys("");
-				 driver.findElement(By.xpath("//*[@name='passwd']")).sendKeys("");
+				 driver.findElement(username).sendKeys("U409022");
+				 driver.findElement(By.xpath("//*[@name='passwd']")).sendKeys("Infy1792");
 				 driver.findElement(By.id("Log_On")).click();
 				 Thread.sleep(2000);
 			 }
@@ -163,19 +163,25 @@ public class Citrix_Login {
                     return name.endsWith(".ica");
                 }
             });
+            long time_updated=0;
+            File file_open = null;
             
             for(File file : fileList) {
-                //System.out.println(file.getName());
-               // Process process = new ProcessBuilder(path+"\\"+file.getName()).start();
-                
-            	String cmd1= "cmd /c "+file.getName();
-            	String cmd2= path+"\\";
-                Runtime run  = Runtime.getRuntime(); 
-                Process proc = run.exec(
-                		cmd1,null, new File(cmd2)
-                		); 
-               
+            	long cur_time=file.lastModified();
+            	if(time_updated<cur_time) {
+            		time_updated=cur_time;
+            		file_open=file;
+            	}
+            	
             }
+            
+            String cmd1= "cmd /c "+file_open.getName();
+        	String cmd2= path+"\\";
+            Runtime run  = Runtime.getRuntime(); 
+            Process proc = run.exec(
+            		cmd1,null, new File(cmd2)
+            		); 
+            
 			
 		} catch (Exception e) {
 			
