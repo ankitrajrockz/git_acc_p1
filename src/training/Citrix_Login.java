@@ -70,7 +70,7 @@ public class Citrix_Login {
 			 
 			 if(elementFound(driver, 10, username)) {
 				 driver.findElement(username).sendKeys("U409022");
-				 driver.findElement(By.xpath("//*[@name='passwd']")).sendKeys("Infy1792");
+				 driver.findElement(By.xpath("//*[@name='passwd']")).sendKeys("Infy1794");
 				 driver.findElement(By.id("Log_On")).click();
 				 Thread.sleep(2000);
 			 }
