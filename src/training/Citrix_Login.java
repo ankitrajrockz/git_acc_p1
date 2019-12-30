@@ -35,7 +35,7 @@ public class Citrix_Login {
 	private  static WebDriver driver;
 	public static void main(String[] args) throws Throwable {
 		// TODO Auto-generated method stub
-		
+		openFile();
 			try {
 				
 			 System.setProperty("webdriver.chrome.driver","C:\\Users\\Ankit.j.Raj\\Desktop\\Selenium\\chromedriver.exe");
@@ -114,9 +114,10 @@ public class Citrix_Login {
 						el.click();
 						Thread.sleep(6000);
 						
-						openFile();
+						
 					}
 				}
+				openFile();
 				
 			}
 			}
